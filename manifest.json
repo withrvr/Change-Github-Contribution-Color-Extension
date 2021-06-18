@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"version": "0.1.0",
+
+	"name": "Change Github Contribution Graph Color",
+	"description": "Changes the color of the Github Contribution Graph with custom color ( blue for now )",
+
+	"icons": {
+		"128": "./images/logo.png",
+		"48": "./images/logo.png",
+		"16": "./images/logo.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://github.com/*", "http://github.com/*"],
+			"js": ["./src/content.js"]
+		}
+	]
+}
