@@ -1,5 +1,5 @@
 {
-	"manifest_version": 3,
+	"manifest_version": 2,
 	"version": "0.1.0",
 
 	"name": "Change Github Contribution Graph Color",
@@ -16,5 +16,13 @@
 			"matches": ["https://github.com/*", "http://github.com/*"],
 			"js": ["./src/content.js"]
 		}
-	]
+	],
+
+	"browser_action": {
+		"default_icon": "./images/logo.png"
+	},
+
+	"background": {
+		"scripts": ["./src/background.js"]
+	}
 }
