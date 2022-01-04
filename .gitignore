@@ -4,8 +4,6 @@
 # foo files
 foo.*
 bar.*
-foobar.*
-testing.*
 
 # foo folders
 foo

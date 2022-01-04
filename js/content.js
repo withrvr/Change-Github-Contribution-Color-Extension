@@ -15,19 +15,18 @@ function makeChanges(colors) {
 	}
 }
 
-// Callback for when a message is received
-function receiver(request, sender, sendResponse) {
-	if (request.defaultColor) {
-		// green
-		makeChanges(["", "#9be9a8", "#40c463", "#30a14e", "#216e39"]);
-	} else {
-		// blue
-		makeChanges(["", "#79b8ff", "#2188ff", "#0366d6", "#005cc5"]);
-	}
-}
-
 console.log("Change Github Contribution Graph Color");
 console.log("by @withrvr || Extension started...");
 
+// Callback for when a message is received //
 // Listen for messages
-chrome.runtime.onMessage.addListener(receiver);
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+	console.log(message);
+	// if (message.defaultColor) {
+	// 	// green
+	// 	makeChanges(["", "#9be9a8", "#40c463", "#30a14e", "#216e39"]);
+	// } else {
+	// 	// blue
+	// 	makeChanges(["", "#79b8ff", "#2188ff", "#0366d6", "#005cc5"]);
+	// }
+});
